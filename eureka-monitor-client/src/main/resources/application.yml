@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: service-turbine
+server:
+  port: 8767
+
+turbine:
+  aggregator:
+    clusterConfig: default
+  appConfig: eureka-ribbon-client,eureka-feign-client
+  culsterNameExpression: new String("default")
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/
+
+
